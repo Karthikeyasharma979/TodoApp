@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgot Password - TodoApp</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="static/forgot.css">
+</head>
+<body>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+        <div class="container">
+            <a class="logo" href="/">TodoApp</a>
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link" href="/features">Features</a>
+                <a class="nav-link" href="/pricing">Pricing</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container my-5">
+        <div class="form-container">
+            <div class="text-center mb-4">
+                <h1 class="h3 mb-3">Forgot Password</h1>
+                <p class="text-muted">
+                    Enter your email address associated with your account, and we'll send you a password reset link.
+                </p>
+            </div>
+
+            <!-- Alert Messages -->
+            <div class="alert alert-danger" role="alert">
+                Invalid email address. Please try again.
+            </div>
+            <div class="alert alert-success" role="alert">
+                Reset link has been sent to your email address.
+            </div>
+
+            <form novalidate>
+                <div class="mb-4">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input 
+                        type="email" 
+                        class="form-control" 
+                        id="email" 
+                        name="email" 
+                        placeholder="Enter your email address"
+                        required
+                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                    >
+                    <div class="invalid-feedback">
+                        Please enter a valid email address.
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100 mb-3">
+                    Send Reset Link
+                </button>
+
+                <p class="text-center mb-0">
+                    Remember your password? <a href="/login" class="text-decoration-none">Log in</a>
+                </p>
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-top py-4">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center footer-content">
+                <div class="text-muted">
+                    © 2024 TodoApp. All rights reserved.
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+                        <i class="bi bi-github"></i>
+                    </a>
+                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+                        <i class="bi bi-twitter"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - To-Do List App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static\login.css">
+</head>
+
+<body>
+    <header>
+        <div class="alert-container">
+            <div class="custom-alert alert-warning" role="alert">
+                <div class="alert-icon"></div>
+                <div class="alert-content">
+                    <div class="alert-title">Warning</div>
+                    <p class="alert-message">Please complete all required fields.</p>
+                </div>
+                <button type="button" class="alert-close" aria-label="Close">✕</button>
+            </div>
+        </div>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">To-Do List App</a>
+                <div class="nav-links" id="navLinks">
+                    <a href="#">Home</a>
+                    <a href="#">Features</a>
+                    <a href="#">Pricing</a>
+                    <a href="/login" class="button button-secondary button-small">Login</a>
+                    <a href="/signup" class="button button-secondary button-small">Sign Up</a>
+                </div>
+                <div class="hamburger" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main class="container">
+        <div class="form-container">
+            <h1 class="text-center mb-4">Login to Your Account</h1>
+            <form id="loginform" action="/todo" method="post">
+                <div class="mb-3">
+                    <label for="username" class="form-label">Username</label>
+                    <input type="text" class="form-control" id="username" name="username"
+                        placeholder="Enter your username" required minlength="3">
+                    <div class="error-message">Username must be at least 3 characters long</div>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password" name="password"
+                        placeholder="Enter your password" required minlength="8">
+                    <div class="error-message">Password must be at least 8 characters long</div>
+                </div>
+                <div class="d-grid gap-2">
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </div>
+                <div class="text-center mt-3">
+                    <a href="#" class="text-decoration-none">Forgot Password?</a>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white py-4 mt-4">
+        <div class="container text-center">
+            <p>&copy; 2025 To-Do List App. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" target="_blank" class="text-white">Twitter</a>
+                <a href="#" target="_blank" class="text-white">Facebook</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="static\alert.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
