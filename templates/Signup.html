@@ -26,16 +26,18 @@
                 </div>
             </nav>
         </div>
+        {% if result!="True" and result!=null%}
         <div class="alert-container">
             <div class="custom-alert alert-warning" role="alert">
                 <div class="alert-icon"></div>
                 <div class="alert-content">
                     <div class="alert-title">Warning</div>
-                    <p class="alert-message">Please complete all required fields.</p>
+                    <p class="alert-message">{{result}}</p>
                 </div>
                 <button type="button" class="alert-close" aria-label="Close">✕</button>
             </div>
         </div>
+        {% endif %}
     </header>
     <!-- Main Content -->
     <main class="container my-5">
@@ -43,7 +45,7 @@
             <h1 class="text-center mb-4">Create Your Account</h1>
             <p class="text-center text-muted mb-4">Sign up to start managing your tasks effectively</p>
 
-            <form id="signupForm" action ="/hello" method="post">
+            <form id="signupForm" action ="/signup" method="post">
                 <div class="mb-3">
                     <label for="fullName" class="form-label">Full Name</label>
                     <input type="text" class="form-control" id="fullName" name="fullName" 
@@ -99,7 +101,7 @@
 
                 <!-- Login Link -->
                 <p class="text-center mb-0">
-                    Already have an account? <a href="/login" class="text-decoration-none">Log in</a>
+                    Already have an account? <a href="/Login" class="text-decoration-none">Log in</a>
                 </p>
             </form>
         </div>
@@ -126,6 +128,6 @@
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="static/alert.js"></script>
+    <script src="{{ url_for('static', filename='alert.js') }}"></script>
 </body>
 </html>
